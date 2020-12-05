@@ -48,7 +48,7 @@ $(document).ready(function () {
       if (switches.useVars) {
         source += 'title=' + embed.title + ', url=' + embed.url;
       } else {
-        source += 'title="' + embed.title + '", url="' + embed.url + '"';
+        source += 'title=f"' + embed.title + '", url="' + embed.url + '"';
       }
     } else if (embed.title.length === 0) {
       source += "";
@@ -59,7 +59,7 @@ $(document).ready(function () {
       if (switches.useVars) {
         source += 'title=' + embed.title;
       } else {
-        source += 'title="' + embed.title + '"';
+        source += 'title=f"' + embed.title + '"';
       }
 
     }
@@ -75,7 +75,7 @@ $(document).ready(function () {
       if (switches.useVars) {
         source += 'description=' + embed.description;
       } else {
-        source += 'description="' + embed.description + '"';
+        source += 'description=f"' + embed.description + '"';
       }
     }
 
@@ -103,7 +103,7 @@ $(document).ready(function () {
       if (switches.useVars) {
         source += 'name=' + embed.author.name;
       } else {
-        source += 'name="' + embed.author.name + '"';
+        source += 'name=f"' + embed.author.name + '"';
       }
 
       if(embed.author.url) {
@@ -112,7 +112,7 @@ $(document).ready(function () {
         if (switches.useVars) {
           source += 'url=' + embed.author.url;
         } else {
-          source += 'url="' + embed.author.url + '"';
+          source += 'url=f"' + embed.author.url + '"';
         }
       }
 
@@ -125,7 +125,7 @@ $(document).ready(function () {
         if (switches.useVars) {
           source += 'icon_url=' + embed.author.icon;
         } else {
-          source += 'icon_url="' + embed.author.icon + '"';
+          source += 'icon_url=f"' + embed.author.icon + '"';
         }
       }
 
@@ -144,7 +144,7 @@ $(document).ready(function () {
       if (switches.useVars) {
         source += 'url=' + embed.thumb_url;
       } else {
-        source += 'url="' + embed.thumb_url + '"';
+        source += 'url=f"' + embed.thumb_url + '"';
       }
 
       // finish thumbnail
@@ -175,7 +175,7 @@ $(document).ready(function () {
       if (switches.useVars) {
         source += 'embed.add_field(name=' + field.name + ', value=' + field.value + ', inline=' + (field.inline && 'True' || 'False') + ')\n';
       } else {
-        source += 'embed.add_field(name="' + field.name + '", value="' + field.value + '", inline=' + (field.inline && 'True' || 'False') + ')\n';
+        source += 'embed.add_field(name=f"' + field.name + '", value=f"' + field.value + '", inline=' + (field.inline && 'True' || 'False') + ')\n';
       }
     }
 
@@ -186,7 +186,7 @@ $(document).ready(function () {
       if (switches.useVars) {
         source += 'embed.set_footer(text=' + embed.footer + ')\n';
       } else {
-        source += 'embed.set_footer(text="' + embed.footer + '")\n';
+        source += 'embed.set_footer(text=f"' + embed.footer + '")\n';
       }
     }
 
